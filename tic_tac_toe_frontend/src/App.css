@@ -1,0 +1,103 @@
+:root {
+  --primary: #1976d2;
+  --secondary: #1976d2;
+  --accent: #ff9800;
+  --bg-primary: #ffffff;
+  --text-primary: #282c34;
+  --border-color: #e9ecef;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  padding: 20px;
+  background-color: transparent;
+}
+
+.game-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.square {
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text-primary);
+}
+
+.square:hover {
+  background-color: rgba(25, 118, 210, 0.1);
+}
+
+.square.x {
+  color: var(--primary);
+}
+
+.square.o {
+  color: var(--accent);
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reset-button:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 10px;
+  }
+  
+  .status {
+    font-size: 1.2rem;
+  }
+  
+  .square {
+    font-size: 2rem;
+  }
+}
